@@ -1,6 +1,6 @@
 <template>
   <view style="padding: 20px">
-    <up-button type="primary" text="确定"></up-button>
+    <up-button type="primary" text="主题按钮"></up-button>
     <up-button type="primary" :plain="true" text="镂空"></up-button>
     <up-button
       type="primary"

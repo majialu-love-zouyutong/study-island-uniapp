@@ -8,7 +8,8 @@
     },
     "lib": ["esnext", "dom"],
     "types": ["@dcloudio/types", "uview-plus/types"],
-    "verbatimModuleSyntax": true
+    "verbatimModuleSyntax": true,
+    "moduleResolution": "node"
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"]
 }

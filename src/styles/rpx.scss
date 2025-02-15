@@ -1,0 +1,5 @@
+$design-width: 375; // 设计稿宽度
+
+@function rpx($value) {
+  @return $value * calc(750 / $design-width) * 1rpx;
+}
