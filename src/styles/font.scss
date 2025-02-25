@@ -1,0 +1,23 @@
+@import './rpx.scss';
+
+
+@mixin regular-caption2 {
+  font-weight: 400;
+  font-size: rpx(11);
+  line-height: rpx(13);
+  text-align: center;
+}
+
+@mixin medium-body {
+  font-weight: 500;
+  font-size: rpx(17);
+  line-height: rpx(22);
+  text-align: center;
+}
+
+@mixin medium-fontnote {
+  font-weight: 500;
+  font-size: rpx(13);
+  line-height: rpx(18);
+  text-align: center;
+}

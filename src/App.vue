@@ -1,5 +1,8 @@
 <style lang="scss">
 @import 'uview-plus/index.scss';
+page {
+  background-color: $u-bg-color;
+}
 </style>
 <script setup lang="ts">
 import { onLaunch, onShow, onHide } from '@dcloudio/uni-app';
