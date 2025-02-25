@@ -10,9 +10,11 @@ const slogan = '学习岛，给追求卓越的你一片安静的海岸';
 
 // 按钮字体样式
 const customStyle = {
+  width: `${rpx(250)}rpx`,
+  height: `${rpx(40)}rpx`,
   fontWeight: 500,
-  fontSize: rpx(13),
-  lineHeight: rpx(18),
+  fontSize: `${rpx(13)}rpx !important`,
+  lineHeight: `${rpx(18)}rpx !important`,
   textAlign: 'center',
 };
 
@@ -23,17 +25,18 @@ const plantformLogin = '微信一键登录';
 
 // 协议同意变量
 const isAgree = ref(false);
-
 </script>
 <template>
   <view class="login-container">
     <!-- 到顶部距离 -->
     <SpacerBox :height="50" />
     <!-- logo -->
+     <!-- TODO: 修复在平板上不显示问题 -->
     <image
       :src="url"
       mode="scaleToFill"
       :style="{
+        display: 'block',
         width: `${rpx(300)}rpx`,
         height: `${rpx(95)}rpx`,
       }"
@@ -68,8 +71,13 @@ const isAgree = ref(false);
         :custom-style="customStyle"
       ></up-button>
     </view>
+    <SpacerBox :height="133" />
     <view class="protocol">
-      <up-checkbox v-model:checked="isAgree" shape="circle" usedAlone></up-checkbox>
+      <up-checkbox
+        v-model:checked="isAgree"
+        shape="circle"
+        usedAlone
+      ></up-checkbox>
       <text class="text">我已同意并阅读</text>
       <text class="text text-a">《学习岛用户协议》</text>
       <text class="text text-a">《学习岛隐私政策》</text>
@@ -85,8 +93,9 @@ const isAgree = ref(false);
   margin: 0 rpx(10);
   height: 100vh;
   display: flex;
+  justify-content: space-between;
   flex-direction: column;
-  position: relative;
+  // position: relative;
   align-items: center;
   // 宣传语
   .slogan {
@@ -95,18 +104,15 @@ const isAgree = ref(false);
       color: $u-primary;
     }
   }
-  // 登录按钮
-  .login-button {
-    // 按钮的文字样式无法通过scss来修改,在JS中用customStyle来修改
-    // @include medium-fontnote;
-    width: rpx(250);
-  }
+  // 登录按钮的文字样式无法通过scss来修改,在JS中用customStyle来修改
+  // .login-button {
+  // }
   // 用户协议
   .protocol {
-    position: absolute;
+    // position: absolute;
+    // bottom: rpx(30);
     display: flex;
     align-items: center;
-    bottom: rpx(30);
     .text {
       @include regular-caption2;
       color: $u-tips-color;
