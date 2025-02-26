@@ -6,22 +6,18 @@ import { ref, watch, watchEffect } from 'vue';
 const url =
   'https://cdn.jsdelivr.net/gh/majialu-love-zouyutong/pictures/202502242022019.png';
 // 宣传标语
-const slogan = '学习岛，给追求卓越的你一片安静的海岸';
+const slogan = ref('学习岛，给追求卓越的你一片安静的海岸');
 
 // 按钮字体样式
 const customStyle = {
   width: `${rpx(250)}rpx`,
-  height: `${rpx(40)}rpx`,
-  fontWeight: 500,
-  fontSize: `${rpx(13)}rpx !important`,
-  lineHeight: `${rpx(18)}rpx !important`,
-  textAlign: 'center',
+  height: `${rpx(50)}rpx`,
 };
 
 // 普通登录按钮
-const commonLogin = '手机号安全登录';
+const commonLogin = ref('手机号安全登录');
 // 小程序平台登录按钮
-const plantformLogin = '微信一键登录';
+const plantformLogin = ref('微信一键登录');
 
 // 协议同意变量
 const isAgree = ref(false);
@@ -31,7 +27,7 @@ const isAgree = ref(false);
     <!-- 到顶部距离 -->
     <SpacerBox :height="50" />
     <!-- logo -->
-     <!-- TODO: 修复在平板上不显示问题 -->
+    <!-- TODO: 修复在平板上不显示问题 -->
     <image
       :src="url"
       mode="scaleToFill"
@@ -53,11 +49,12 @@ const isAgree = ref(false);
     <view class="login-button">
       <up-button
         icon="phone-fill"
-        :text="commonLogin"
         type="primary"
         shape="circle"
         :custom-style="customStyle"
-      ></up-button>
+      >
+        <text class="btn-text">{{ commonLogin }}</text>
+      </up-button>
     </view>
     <!-- 间距 -->
     <SpacerBox :height="20" />
@@ -65,11 +62,12 @@ const isAgree = ref(false);
     <view class="login-button">
       <up-button
         icon="weixin-fill"
-        :text="plantformLogin"
         type="success"
         shape="circle"
         :custom-style="customStyle"
-      ></up-button>
+      >
+        <text class="btn-text">{{ plantformLogin }}</text>
+      </up-button>
     </view>
     <SpacerBox :height="133" />
     <view class="protocol">
@@ -97,6 +95,7 @@ const isAgree = ref(false);
   flex-direction: column;
   // position: relative;
   align-items: center;
+  // background-color: pink;
   // 宣传语
   .slogan {
     .text {
@@ -104,9 +103,11 @@ const isAgree = ref(false);
       color: $u-primary;
     }
   }
-  // 登录按钮的文字样式无法通过scss来修改,在JS中用customStyle来修改
-  // .login-button {
-  // }
+  .login-button {
+    .btn-text {
+      @include medium-footnote;
+    }
+  }
   // 用户协议
   .protocol {
     // position: absolute;

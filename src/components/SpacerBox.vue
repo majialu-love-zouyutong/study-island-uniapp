@@ -2,16 +2,7 @@
 import { rpx } from '@/utils/rpx';
 
 interface Props {
-  /**
-   * 垂直间距高度 (单位：设计稿 px 值)
-   * @default 0
-   */
   height?: number;
-
-  /**
-   * 水平间距宽度 (单位：设计稿 px 值)
-   * @default 0
-   */
   width?: number;
 }
 

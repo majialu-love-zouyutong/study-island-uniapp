@@ -8,16 +8,44 @@
   text-align: center;
 }
 
-@mixin medium-body {
+@mixin regular-footnote {
+  font-weight: 400;
+  font-size: rpx(13);
+  line-height: rpx(18);
+  text-align: center;
+}
+
+@mixin medium-subheadline {
+  font-weight: 500;
+  font-size: rpx(15);
+  line-height: rpx(20);
+  text-align: center;
+}
+
+@mixin medium-body { 
   font-weight: 500;
   font-size: rpx(17);
   line-height: rpx(22);
   text-align: center;
 }
 
-@mixin medium-fontnote {
+@mixin medium-footnote {
   font-weight: 500;
   font-size: rpx(13);
   line-height: rpx(18);
+  text-align: center;
+}
+
+@mixin bold-title2 {
+  font-weight: 600;
+  font-size: rpx(22);
+  line-height: rpx(28);
+  text-align: center;
+}
+
+@mixin bold-body {
+  font-weight: 600;
+  font-size: rpx(17);
+  line-height: rpx(22);
   text-align: center;
 }
