@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import SpacerBox from '@/components/SpacerBox.vue';
 import { rpx } from '@/utils/rpx';
-import { ref, watch, watchEffect } from 'vue';
+import { ref } from 'vue';
 // logo地址
 const url =
   'https://cdn.jsdelivr.net/gh/majialu-love-zouyutong/pictures/202502242022019.png';

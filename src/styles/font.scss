@@ -1,5 +1,11 @@
 @import './rpx.scss';
 
+@mixin regular-caption1 {
+  font-weight: 400;
+  font-size: rpx(12);
+  line-height: rpx(16);
+  text-align: center;
+}
 
 @mixin regular-caption2 {
   font-weight: 400;
@@ -8,10 +14,31 @@
   text-align: center;
 }
 
+@mixin regular-headline {
+  font-weight: 400;
+  font-size: rpx(17);
+  line-height: rpx(22);
+  text-align: center;
+}
+
+@mixin regular-subheadline {
+  font-weight: 400;
+  font-size: rpx(15);
+  line-height: rpx(20);
+  text-align: center;
+}
+
 @mixin regular-footnote {
   font-weight: 400;
   font-size: rpx(13);
   line-height: rpx(18);
+  text-align: center;
+}
+
+@mixin medium-caption2 {
+  font-weight: 500;
+  font-size: rpx(11);
+  line-height: rpx(13);
   text-align: center;
 }
 
@@ -35,6 +62,19 @@
   line-height: rpx(18);
   text-align: center;
 }
+@mixin bold-caption1 {
+  font-weight: 600;
+  font-size: rpx(12);
+  line-height: rpx(16);
+  text-align: center;
+}
+
+@mixin bold-caption2 {
+  font-weight: 600;
+  font-size: rpx(11);
+  line-height: rpx(13);
+  text-align: center;
+}
 
 @mixin bold-title2 {
   font-weight: 600;
@@ -43,9 +83,29 @@
   text-align: center;
 }
 
+@mixin bold-title3 {
+  font-weight: 600;
+  font-size: rpx(20);
+  line-height: rpx(25);
+  text-align: center;
+}
+
 @mixin bold-body {
   font-weight: 600;
   font-size: rpx(17);
   line-height: rpx(22);
   text-align: center;
+}
+
+
+@mixin high-shadow {
+  box-shadow: rpx(0) rpx(8) rpx(32) rpx(0) rgba(0, 0, 0, 0.16);
+}
+
+@mixin common-shadow {
+  box-shadow: rpx(0) rpx(4) rpx(16) rpx(0) rgba(0, 0, 0, 0.16);
+}
+
+@mixin low-shadow {
+  box-shadow: rpx(0) rpx(3) rpx(8) rpx(0) rgba(0, 0, 0, 0.16);
 }

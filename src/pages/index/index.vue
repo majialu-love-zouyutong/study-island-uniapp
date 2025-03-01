@@ -60,11 +60,12 @@ const slogan = ref('学习岛，给追求卓越的你一片安静的海岸');
 </template>
 
 <style scoped lang="scss">
-@import '@/styles/rpx.scss';
-@import '@/styles/font.scss';
+@import '~@/styles/rpx.scss';
+@import '~@/styles/font.scss';
 .index-container {
   padding: 0 rpx(18);
   .group-and-book {
+    @include high-shadow;
     display: flex;
     border-radius: rpx(50);
     overflow: hidden;

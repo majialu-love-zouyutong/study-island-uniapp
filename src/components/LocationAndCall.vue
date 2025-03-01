@@ -47,9 +47,10 @@ const props = withDefaults(defineProps<Props>(), {
 </template>
 
 <style scoped lang="scss">
-@import '@/styles/rpx.scss';
-@import '@/styles/font.scss';
+@import '~@/styles/rpx.scss';
+@import '~@/styles/font.scss';
 .location-and-call-container {
+  @include low-shadow;
   padding: rpx(10);
   background-color: #e0eaff;
   border-radius: rpx(10);

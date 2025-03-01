@@ -1,5 +1,6 @@
 <style lang="scss">
 @import 'uview-plus/index.scss';
+@import '@/styles/font.scss';
 page {
   background-color: $u-bg-color;
 }

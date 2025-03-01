@@ -51,6 +51,7 @@
     "appid": "wx8ada1a29c4900011",
     "setting": {
       "urlCheck": false
+      // "ignoreDevUnusedFiles": false
     },
     "usingComponents": true,
     "mergeVirtualHostAttributes": true

@@ -61,16 +61,17 @@ const items = ref([
 </template>
 
 <style scoped lang="scss">
-@import '@/styles/rpx.scss';
-@import '@/styles/font.scss';
+@import '~@/styles/rpx.scss';
+@import '~@/styles/font.scss';
 .function-panel-container {
+  @include common-shadow;
   padding: rpx(13) rpx(15);
   background-color: #fff;
   border-radius: rpx(10);
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  gap: rpx(10);
+  gap: rpx(20);
   .function {
     display: flex;
     flex-direction: column;

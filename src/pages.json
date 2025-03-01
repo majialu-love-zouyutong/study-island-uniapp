@@ -21,12 +21,60 @@
       "style": {
         "navigationBarTitleText": "登录"
       }
+    },
+    {
+      "path": "pages/card/card",
+      "style": {
+        "navigationBarTitleText": "卡券"
+      }
+    },
+    {
+      "path": "pages/order/order",
+      "style": {
+        "navigationBarTitleText": "订单"
+      }
+    },
+    {
+      "path": "pages/my/my",
+      "style": {
+        "navigationBarTitleText": "我的"
+      }
     }
   ],
   "globalStyle": {
-    "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "uni-app",
-    "navigationBarBackgroundColor": "#F8F8F8",
+    "navigationBarTextStyle": "black", 
+    "navigationBarBackgroundColor": "#ffffff",
     "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "color": "#ceccca",
+    "selectedColor": "#3c9cff",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "static/tabbar/home@2x.png",
+        "selectedIconPath": "static/tabbar/home-selected@2x.png"
+      },
+      {
+        "pagePath": "pages/card/card",
+        "text": "卡券",
+        "iconPath": "static/tabbar/coupon@2x.png",
+        "selectedIconPath": "static/tabbar/coupon-selected@2x.png"
+      },
+      {
+        "pagePath": "pages/order/order",
+        "text": "订单",
+        "iconPath": "static/tabbar/order@2x.png",
+        "selectedIconPath": "static/tabbar/order-selected@2x.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "static/tabbar/account@2x.png",
+        "selectedIconPath": "static/tabbar/account-selected@2x.png"
+      }
+    ]
   }
 }
