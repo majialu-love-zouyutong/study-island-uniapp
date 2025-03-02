@@ -1,6 +1,11 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import SpacerBox from './SpacerBox.vue';
+import { makePhoneCall } from '@/utils/makePhoneCall';
+
+// 定义Emits
+const emit = defineEmits(['connect-wifi']);
+
 // 数据
 const items = ref([
   {
@@ -44,11 +49,47 @@ const items = ref([
     description: '常见问题',
   },
 ]);
+
+// 点击处理函数
+const handleFunctionClick = (id: number) => {
+  switch (id) {
+    case 4: // 打电话
+      makePhoneCall();
+      break;
+    case 5: // 连接WIFI
+      emit('connect-wifi');
+      break;
+    case 6: // 用储物柜
+      uni.navigateTo({
+        url: '/pagesIndex/lock/lock',
+      });
+      break;
+    case 7: // 用打印机
+      uni.navigateTo({
+        url: '/pagesIndex/printer/printer',
+      });
+      break;
+    case 8: // 常见问题
+      uni.navigateTo({
+        url: '/pagesIndex/questions/questions',
+      });
+      break;
+    default:
+      uni.switchTab({
+        url: '/pages/card/card',
+      });
+  }
+};
 </script>
 
 <template>
   <view class="function-panel-container">
-    <view v-for="item in items" :key="item.id" class="function">
+    <view
+      @click="handleFunctionClick(item.id)"
+      v-for="item in items"
+      :key="item.id"
+      class="function"
+    >
       <image
         :src="`/static/icons/${item.name}`"
         mode="scaleToFill"

@@ -42,7 +42,7 @@
     }
   ],
   "globalStyle": {
-    "navigationBarTextStyle": "black", 
+    "navigationBarTextStyle": "black",
     "navigationBarBackgroundColor": "#ffffff",
     "backgroundColor": "#F8F8F8"
   },
@@ -76,5 +76,57 @@
         "selectedIconPath": "static/tabbar/account-selected@2x.png"
       }
     ]
+  },
+  "subPackages": [
+    {
+      "root": "pagesIndex",
+      "pages": [
+        {
+          "path": "lock/lock",
+          "style": {
+            "navigationBarTitleText": "用储物柜"
+          }
+        },
+        {
+          "path": "printer/printer",
+          "style": {
+            "navigationBarTitleText": "用打印机"
+          }
+        },
+        {
+          "path": "questions/questions",
+          "style": {
+            "navigationBarTitleText": "常见问题"
+          }
+        }
+      ]
+    },
+    {
+      "root": "pagesMy",
+      "pages": [
+        {
+          "path": "personl/personl",
+          "style": {
+            "navigationBarTitleText": "个人信息"
+          }
+        },
+        {
+          "path": "my-card/my-card",
+          "style": {
+            "navigationBarTitleText": "我的卡包"
+          }
+        }
+      ]
+    }
+  ],
+  "preloadRule": {
+    "pages/index/index": {
+      "network": "all",
+      "packages": ["pagesIndex"]
+    },
+    "pages/my/my": {
+      "network": "all",
+      "packages": ["pagesMy"]
+    }
   }
 }

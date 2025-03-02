@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { $uPrimary } from '@/styles/const';
 import SpacerBox from './SpacerBox.vue';
+import { makePhoneCall } from '@/utils/makePhoneCall';
 
 interface Props {
   title?: string;
@@ -34,7 +35,7 @@ const props = withDefaults(defineProps<Props>(), {
       />
     </view>
     <SpacerBox :width="11" />
-    <view class="phone icon">
+    <view @click="makePhoneCall()" class="phone icon">
       <image
         style="width: 25rpx; height: 25rpx"
         src="@/static/icons/phone@3x.png"
