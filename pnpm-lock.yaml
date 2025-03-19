@@ -87,6 +87,9 @@ importers:
       '@vue/tsconfig':
         specifier: ^0.1.3
         version: 0.1.3(@types/node@22.13.1)
+      qrcode-terminal:
+        specifier: ^0.12.0
+        version: 0.12.0
       sass:
         specifier: 1.63.2
         version: 1.63.2

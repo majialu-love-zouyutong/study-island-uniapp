@@ -8,7 +8,7 @@ const url =
 // 宣传标语
 const slogan = ref('学习岛，给追求卓越的你一片安静的海岸');
 
-// 按钮字体样式
+// 按钮样式
 const customStyle = {
   width: `${rpx(250)}rpx`,
   height: `${rpx(50)}rpx`,

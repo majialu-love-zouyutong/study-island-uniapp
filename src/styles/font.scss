@@ -35,6 +35,13 @@
   text-align: center;
 }
 
+@mixin medium-headline {
+  font-weight: 500;
+  font-size: rpx(17);
+  line-height: rpx(22);
+  text-align: center;
+}
+
 @mixin medium-caption2 {
   font-weight: 500;
   font-size: rpx(11);
@@ -90,10 +97,24 @@
   text-align: center;
 }
 
+@mixin bold-subheadline {
+  font-weight: 600;
+  font-size: rpx(15);
+  line-height: rpx(20);
+  text-align: center;
+}
+
 @mixin bold-body {
   font-weight: 600;
   font-size: rpx(17);
   line-height: rpx(22);
+  text-align: center;
+}
+
+@mixin bold-footnote {
+  font-weight: 600;
+  font-size: rpx(13);
+  line-height: rpx(18);
   text-align: center;
 }
 

@@ -12,8 +12,9 @@ const list = ref(['充值享优惠', '性价比卡券', '团购核销']);
       font-size="13"
       mode="subsection"
       inactive-color="#3c9cff"
+      @change="(index) => $emit('change', index)"
     ></up-subsection>
-  </view> 
+  </view>
 </template>
 
 <style scoped lang="scss">
